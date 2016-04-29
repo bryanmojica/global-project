@@ -8,10 +8,13 @@
 		</title>
 		<!-- Leaflet -->
 		<link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+		<link rel="stylesheet" href="custom.css" />
+		<link rel="stylesheet" href="lib/leaflet/leaflet.label.css" />
 		<script src="lib/leaflet/leaflet.js"></script>
+		<script src="lib/leaflet/leaflet.label.js"></script>
 		<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
 		<script src="lib/leaflet/Google.js"></script>
-		<script src="data/countries.geojson"></script>
+		<script src="data/countries.js"></script>
 		<style type="text/css">
 			#map { height : 500px; }
 			.legend { background : white; line-height : 1.5em; padding: 10px;}
@@ -19,8 +22,101 @@
 		</style>
 	</head>
 	<body>
-		<h1>Global GDP</h1>
+		<div class="head-panel">
+			<h1 class="page-head">Gl<img class="globe-o" src="global.png">bal GDP</h1>
+			<h2 class="viz">A Visualization! <span class="bry">by Bryan Mojica</span></h2>
+		</div>
 		<div id="map"></div>
+		<div id="data-output"></div>
+		<div id="data-output2"></div>
+		<div id="data-output3"></div>
+		Global pop:<div id="global-pop"></div>
+		GDP per person: <div id="GDP-per"></div>
+		
+		<script>
+		
+		// write each
+	
+		function each (collection, callback) {
+			for (var i = 0; i < collection.length; i++) {
+				callback(collection[i]);
+			}
+		 }
+
+		// write reduce
+
+		function reduce (collection, callback) {
+			var tally;
+			each(collection, function(item) {
+				tally += callback(item);
+			});
+			return tally;
+		}
+
+		function summer (num1, num2) {
+			return num1 + num2;
+		}
+
+		// calculate global GDP (total)
+
+		var reducedGDP = 0;
+
+		var totalpop = 0;
+
+		for(var i = 0; i < countries.features.length; i++) {
+			totalpop += countries.features[i].properties.pop_est;
+		}
+
+		// function makes numbers "pretty", adding commas
+
+		function makePrettyNumber(x) {
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
+
+		var prettypop = makePrettyNumber(totalpop);
+
+		document.getElementById("global-pop").innerHTML = prettypop;
+
+
+		// sort will do so alphabetically; create numberSort to handle number
+		function numberHandler(a,b) {
+			return a - b;
+		}
+
+		// test with array, passing in numberHandler
+
+		var GDParray = [];
+		for(var i = 0; i < countries.features.length; i++) {
+			GDParray.push(countries.features[i].properties.gdp_md_est);
+		}
+
+		// sort numbers, ascending
+		var GDPsorted = GDParray.sort(numberHandler);
+
+		// reverse to ensure descending order (useful in determining ranking below)
+		GDPsorted.reverse();
+
+
+
+		console.log(countries.features.length);
+		document.getElementById("data-output").innerHTML = countries.features[0].properties.gdp_md_est;
+		
+		var globalGDP = 0;
+		
+		for(var i = 0; i < countries.features.length; i++) {
+			globalGDP += countries.features[i].properties.gdp_md_est;
+		}
+
+		var prettyGlobal = makePrettyNumber(globalGDP);
+
+		document.getElementById("GDP-per").innerHTML = (globalGDP / totalpop);
+
+		document.getElementById("data-output2").innerHTML = prettyGlobal;
+		
+		console.log(reduce(countries.features[0].properties.gdp_md_est));
+
+		</script>
+		
 		<script>
 			var countriesLayer;
 			
@@ -42,12 +138,26 @@
 			function resetHighlight(e){
 				countriesLayer.resetStyle(e.target);
 			}
-			
+
 			function zoomToFeature(e){
 				map.fitBounds(e.target.getBounds());
 			}
-			
+
 			function countriesOnEachFeature(feature, layer){
+
+
+				// check sorted GDP array and return ranking
+				var GDPrank = (GDPsorted.indexOf(feature.properties.gdp_md_est) + 1);
+
+
+				// calculate GDP per Capita, for highlighted country. put GDP in proper terms (multiply by 1 million)
+				var GDPpercap = (1000000 * feature.properties.gdp_md_est / feature.properties.pop_est);
+				// reduce decimal points to 2 places + add commas
+				GDPpercap = makePrettyNumber(GDPpercap.toFixed(2));
+
+				var indivGDP = (makePrettyNumber(feature.properties.gdp_md_est));
+
+				layer.bindLabel(feature.properties.name + '<br /> Global Ranking: #' + GDPrank + '<br /> Annual GDP:' + ' $' + indivGDP + '<br /> GDP per Capita: $' + GDPpercap,{noHide:true});
 				layer.on(
 					{
 						mouseover : highlightFeature,
@@ -56,9 +166,11 @@
 					}
 				);
 			}
-			
+
+
+
 			// conditional style logic: return hex color based on country's GDP
-					
+
 			function getCountryColor(gdp_md_est){
 				if (gdp_md_est > 15000000){
 					return '#103910';
@@ -85,9 +197,9 @@
 					return '#CEEFBD';
 				}
 			}
-			
-			// fill and color 
-			
+
+			// fill and color
+
 			function countriesStyle(feature){
 				return {
 					fillColor : getCountryColor(feature.properties.gdp_md_est),
@@ -98,12 +210,12 @@
 					fillOpacity : 1
 				}
 			}
-			
+
 			var map = L.map('map').setView([43.8476, 18.3564], 16);
-			
+
 			var googleLayer = new L.Google();
 			map.addLayer(googleLayer);
-			
+
 			countriesLayer = L.geoJson(
 				countries,
 				{
@@ -112,14 +224,14 @@
 				}
 			).addTo(map);
 			map.fitBounds(countriesLayer.getBounds());
-			
+
 			var legend = L.control({position : 'bottomright'});
 			legend.onAdd = function(map){
 				var div = L.DomUtil.create('div', 'legend');
 				var labels = [
-					"GDP greater than $100000000", 
-					"GDP greater than $50000000", 
-					"GDP greater than $50000000",
+					"GDP greater than $100,000,000",
+					"GDP greater than $70,000,000",
+					"GDP greater than $50,000,000",
 					"GDP greater than $50000000",
 					"GDP greater than $50000000",
 					"GDP greater than $50000000",
@@ -128,7 +240,7 @@
 				];
 				var grades = [15000001, 7000001, 1000001, 50001, 25001, 10001];
 				for(var i = 0; i < grades.length; i++){
-					div.innerHTML += '<i style="background:' 
+					div.innerHTML += '<i style="background:'
 					+ getCountryColor(grades[i]) + '">&nbsp;&nbsp;</i>&nbsp;&nbsp;'
 					+ labels[i] + '<br />';
 				}

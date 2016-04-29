@@ -1,0 +1,69 @@
+/* custom styling */
+
+@font-face {
+    font-family: 'PN';
+    src: url('fonts/PN.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/PN.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'TG';
+    src: url('fonts/TG.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/TG.ttf')  format('truetype');
+}
+
+
+
+h1, h2, h3, h4, h5 {
+    font-family: PN;
+    font-weight:bold;
+}
+
+body {
+    font-family: TG;
+}
+
+h1.page-head {
+    text-align: center;
+    font-size: 60px;
+    margin: 15px;
+}
+
+h2.viz {
+    text-align: center;
+    font-family: PN;
+    color: green;
+    font-weight: 100;
+    margin-top: -20px;
+    margin-bottom: 5px;
+}
+
+.head-panel {
+    margin-bottom: 9px;
+    background-color: rgba(128, 128, 128, 0.12);
+    padding-bottom: 1px;
+    margin-top: -5px;
+}
+
+.legend.leaflet-control {
+    font-family: TG;
+}
+
+.leaflet-label::first-line {
+    font-size: 16px;
+    padding-top:10px;
+}
+
+img.globe-o {
+    width: 36px;
+    margin-bottom: -2px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+span.bry {
+    font-size: 10px;
+    color: rgba(0,0,0,0.65);
+    vertical-align: middle;
+    font-family: PN;
+}
