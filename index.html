@@ -24,42 +24,34 @@
 	</head>
 	<body>
 		<div class="head-panel">
-			<h1 class="page-head">Gl<img class="globe-o" src="global.png">bal GDP (v3 test!)</h1>
+			<h1 class="page-head">Gl<img class="globe-o" src="global.png">bal GDP</h1>
 			<h2 class="viz">A Visualization! <span class="bry">by Bryan Mojica</span></h2>
 			<h4 class="measured">"annual GDP" is listed in $millions</h4>
 		</div>
+
 		<div id="map"></div>
+
+		<div id="global-pop"></div>
+		<div id="total-global-gdp"></div>
+		<div id="global-cap"></div>
+
+
 		<select class="custom" id = "CountryList">
-			<option selected = "selected">Drill into a country for a little more info...</option>
+			<option selected = "selected">Select a country for more info...</option>
 		</select>
+
 		<div id="PropertiesDiv"></div>
-		<div id="rollover-data"></div>
-		<div id="data-output"></div>
-		<div id="data-output2"></div>
-		<div id="data-output3"></div>
 
-
-		<table>
-			<script language="javascript" type="text/javascript">
-
-				for (var i = 0; i < countries.features.length; i++) {
-				document.write("<tr><td>" + countries.features[i].properties.sovereignt + "</td>");
-				document.write("<td>" + countries.features[i].properties.pop_est + "</td></tr>");
-				}
-
-			</script>
-		</table>
-		Global pop:<div id="global-pop"></div>
-		GDP per person: <div id="GDP-per"></div>
-		
 		<script>
 
-			// function makes numbers "pretty", adding commas
+			// create function to make numbers "pretty", adding commas every 3 digits
 			function makePrettyNumber(num) {
 				return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 			}
 
+			// create select dropdown, which pulls desired information for selected country (from countries.js)
 			var select = document.getElementById("CountryList");
+
 			var options = [];
 
 			for (var i = 0; i < countries.features.length; i++) {
@@ -74,6 +66,7 @@
 				select.appendChild(option);
 			}
 
+			// create event listener to handle selection of new country / display of new data
 			select.addEventListener('change', function(event) {
 				console.log(event.target.value);
 
@@ -82,18 +75,20 @@
 				var div = document.getElementById("PropertiesDiv");
 
 
-				// calculate GDP per Capita, for highlighted country. put GDP in proper terms (multiply by 1 million)
+				// calculate GDP per Capita, for highlighted country. first put GDP in proper terms (multiply by 1 million)
 				var GDPcap = (1000000 * selectedProperties.gdp_md_est / selectedProperties.pop_est);
+
 				// reduce decimal points to 2 places + add commas
 				GDPcap = makePrettyNumber(GDPcap.toFixed(2));
-
-
 
 				var GDP = makePrettyNumber(selectedProperties.gdp_md_est);
 				var pop = makePrettyNumber(selectedProperties.gdp_md_est);
 
+				// check sorted GDP array and return ranking for selected country
+				var GDPrank = (GDPsorted.indexOf(selectedProperties.gdp_md_est) + 1);
+
 				div.innerHTML = '<table><tr>' + '<td class="country-name" colspan="2">'+ selectedProperties.sovereignt +'</td></tr>'
-						+ '<tr>' + '<td>Global GDP Ranking</td>' + '<td>' + 'to be filled!' + '</td></tr>'
+						+ '<tr>' + '<td>Global GDP Ranking</td>' + '<td> #' + GDPrank + '</td></tr>'
 						+ '<tr>' + '<td>GDP, in millions</td>' + '<td>'+ '$' + GDP +'</td></tr>'
 						+ '<tr>' + '<td>Population</td>' + '<td>'+ pop +'</td></tr>'
 						+ '<tr>' + '<td>GDP per Capita</td>' + '<td>' + '$' + GDPcap +'</td></tr>'
@@ -103,51 +98,19 @@
 			});
 
 
-
-
-			// write each
-	
-			function each (collection, callback) {
-				for (var i = 0; i < collection.length; i++) {
-					callback(collection[i]);
-				}
-			 }
-
-			// write reduce
-
-			function reduce (collection, callback) {
-				var tally;
-				each(collection, function(item) {
-					tally += callback(item);
-				});
-				return tally;
-			}
-
-			function summer (num1, num2) {
-				return num1 + num2;
-			}
-
-			// calculate global GDP (total)
-
-			var reducedGDP = 0;
-
+			// calculate Total Global Population
 			var totalpop = 0;
 
 			for(var i = 0; i < countries.features.length; i++) {
 				totalpop += countries.features[i].properties.pop_est;
 			}
 
-			// function makes numbers "pretty", adding commas
-
-			function makePrettyNumber(x) {
-				return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-			}
-
 			var prettypop = makePrettyNumber(totalpop);
 
-			document.getElementById("global-pop").innerHTML = prettypop;
+			document.getElementById("global-pop").innerHTML = 'Total Global Population: ' + prettypop;
 
 
+			// create sorted list of countries, by annual GDP (to later be used in determining ranking)
 			// sort will do so alphabetically; create numberSort to handle number
 			function numberHandler(a,b) {
 				return a - b;
@@ -163,30 +126,30 @@
 			// sort numbers, ascending
 			var GDPsorted = GDParray.sort(numberHandler);
 
-			// reverse to ensure descending order (useful in determining ranking below)
+			// reverse to ensure descending order (where first entry will have most GDP)
 			GDPsorted.reverse();
 
 
 
-
-
-			document.getElementById("data-output").innerHTML = countries.features[0].properties.gdp_md_est;
-
+			// calculate Total Global GDP
 			var globalGDP = 0;
 
 			for(var i = 0; i < countries.features.length; i++) {
 				globalGDP += countries.features[i].properties.gdp_md_est;
 			}
 
+			// clean up number appearance
+			globalGDP = (globalGDP * 1000000).toFixed(2);
+
 			var prettyGlobal = makePrettyNumber(globalGDP);
 
-			document.getElementById("GDP-per").innerHTML = (globalGDP / totalpop);
+			// output in divs on page
+			document.getElementById("total-global-gdp").innerHTML = 'Total Global GDP: $' + prettyGlobal;
 
-			document.getElementById("data-output2").innerHTML = prettyGlobal;
+			document.getElementById("global-cap").innerHTML = 'Global GDP per Capita : ' + makePrettyNumber((globalGDP / totalpop));
 
-		</script>
-		
-		<script>
+
+			// Leaflet customization: country hover status effect
 			var countriesLayer;
 			
 			function highlightFeature(e){
@@ -194,7 +157,7 @@
 				layer.setStyle(
 					{
 						weight : 5,
-						color : 'black',
+						color : 'green',
 						fillColor : 'white',
 						fillOpacity : 0.2
 					}
@@ -221,14 +184,13 @@
 
 				// calculate GDP per Capita, for highlighted country. put GDP in proper terms (multiply by 1 million)
 				var GDPpercap = (1000000 * feature.properties.gdp_md_est / feature.properties.pop_est);
-				// reduce decimal points to 2 places + add commas
+
+				// make numbers look nice for output (commas + # decimals, where appropriate)
 				GDPpercap = makePrettyNumber(GDPpercap.toFixed(2));
 
 				var indivGDP = (makePrettyNumber(feature.properties.gdp_md_est));
 
 				var indivPop = (makePrettyNumber(feature.properties.pop_est));
-
-				document.getElementById("rollover-data").innerHTML = indivPop;
 
 				layer.bindLabel(feature.properties.name + '<br /> Global Ranking: #' + GDPrank + '<br /> Annual GDP:' + ' $' + indivGDP + '<br /> Population: ' + indivPop + '<br /> GDP per Capita: $' + GDPpercap,{noHide:true});
 				layer.on(
@@ -240,11 +202,7 @@
 				);
 			}
 
-
-
-
-			// conditional style logic: return hex color based on country's GDP
-
+			// conditional style logic: return hex color based on country's GDP. set threshold tiers.
 			function getCountryColor(gdp_md_est){
 				if (gdp_md_est > 15000000){
 					return '#103910';
@@ -273,7 +231,6 @@
 			}
 
 			// fill and color
-
 			function countriesStyle(feature){
 				return {
 					fillColor : getCountryColor(feature.properties.gdp_md_est),
@@ -285,6 +242,7 @@
 				}
 			}
 
+			// initial view
 			var map = L.map('map').setView([43.8476, 18.3564], 16);
 
 			var googleLayer = new L.Google();
@@ -299,6 +257,7 @@
 			).addTo(map);
 			map.fitBounds(countriesLayer.getBounds());
 
+			// create map legend and layers
 			var legend = L.control({position : 'bottomright'});
 			legend.onAdd = function(map){
 				var div = L.DomUtil.create('div', 'legend');
@@ -312,6 +271,8 @@
 					"GDP greater than $100 Million",
 					"GDP less than $100 Million"
 				];
+
+				// legend thresholds
 				var grades = [15000001, 7000001, 2000001, 1000001, 50001, 25001, 10001, 1];
 				for(var i = 0; i < grades.length; i++){
 					div.innerHTML += '<i style="background:'
