@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65f34fa1-fec0-4183-a193-861f67b96b6f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/bry4n__.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/global-proj.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/custom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/countries.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/PN.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/PN.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/TG.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/TG.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global-project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/leaflet/Google.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/leaflet/images/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/leaflet/images/marker-icon-2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/leaflet/images/marker-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/leaflet/leaflet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/leaflet/leaflet.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/leaflet/leaflet.label-src.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/leaflet/leaflet.label.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/leaflet/leaflet.label.js" afterPath="" />
-    </list>
+    <list default="true" id="65f34fa1-fec0-4183-a193-861f67b96b6f" name="Default" comment="" />
     <ignored path="global-proj.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -54,8 +25,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2874859">
-              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.20293123">
+              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <marker date="1462377968000" expanded="true" signature="3294:3987" placeholder="..." />
                 <marker date="1462377968000" expanded="true" signature="9161:9172" placeholder="..." />
@@ -289,7 +260,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1969" y="92" width="1391" height="1057" extended-state="1" />
+    <frame x="1969" y="92" width="1391" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17272054" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -408,8 +379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2874859">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.20293123">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <marker date="1462377968000" expanded="true" signature="3294:3987" placeholder="..." />
             <marker date="1462377968000" expanded="true" signature="9161:9172" placeholder="..." />
