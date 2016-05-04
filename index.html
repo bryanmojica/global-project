@@ -139,14 +139,17 @@
 			}
 
 			// clean up number appearance
-			globalGDP = (globalGDP * 1000000).toFixed(2);
+			globalGDP = (globalGDP * 1000000);
 
 			var prettyGlobal = makePrettyNumber(globalGDP);
+
+			globalCap = (globalGDP / totalpop);
+			globalCap = makePrettyNumber(globalCap.toFixed(2));;
 
 			// output in divs on page
 			document.getElementById("total-global-gdp").innerHTML = 'Total Global GDP: $' + prettyGlobal;
 
-			document.getElementById("global-cap").innerHTML = 'Global GDP per Capita : ' + makePrettyNumber((globalGDP / totalpop));
+			document.getElementById("global-cap").innerHTML = 'Global GDP per Capita : $' + globalCap;
 
 
 			// Leaflet customization: country hover status effect
