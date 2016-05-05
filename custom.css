@@ -28,6 +28,10 @@ h1.page-head {
     margin: 15px;
 }
 
+#map { height : 500px; }
+.legend {  background : white; line-height : 1.5em; padding: 10px;}
+.legend i { width : 5em; float : left }
+
 h2.viz {
     text-align: center;
     font-family: PN;
@@ -131,6 +135,12 @@ div#global-metrics {
         width: 320px;
     }
 
+    #map {
+        height: 300px;
+    }
 
+    .legend.leaflet-control {
+        display: none;
+    }
 
 }
