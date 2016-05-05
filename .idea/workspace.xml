@@ -28,11 +28,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3461537">
-              <caret line="219" column="41" selection-start-line="219" selection-start-column="38" selection-end-line="219" selection-end-column="41" />
+            <state vertical-scroll-proportion="-5.576923">
+              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
               <folding>
-                <marker date="1462418565000" expanded="true" signature="3134:3821" placeholder="..." />
-                <marker date="1462418565000" expanded="true" signature="8811:8822" placeholder="..." />
+                <marker date="1462419034000" expanded="true" signature="3262:3949" placeholder="..." />
+                <marker date="1462419034000" expanded="true" signature="8939:8950" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -41,7 +41,7 @@
       <file leaf-file-name="countries.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/countries.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="572.2222">
+            <state vertical-scroll-proportion="209.44444">
               <caret line="5" column="988" selection-start-line="5" selection-start-column="988" selection-end-line="5" selection-end-column="988" />
               <folding />
             </state>
@@ -71,8 +71,8 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83870965">
-              <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.60573477">
+              <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
               <folding>
                 <element signature="e#1770#2319#2" expanded="true" />
               </folding>
@@ -106,9 +106,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2400" />
+    <option name="x" value="1462" />
     <option name="y" value="92" />
-    <option name="width" value="960" />
+    <option name="width" value="1898" />
     <option name="height" value="1007" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -263,10 +263,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2400" y="92" width="960" height="1007" extended-state="0" />
+    <frame x="1462" y="92" width="1898" height="1007" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25381264" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1255388" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -306,8 +306,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1462418565000" expanded="true" signature="3134:3821" placeholder="..." />
-            <marker date="1462418565000" expanded="true" signature="8811:8822" placeholder="..." />
+            <marker date="1462419034000" expanded="true" signature="3262:3949" placeholder="..." />
+            <marker date="1462419034000" expanded="true" signature="8939:8950" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -356,7 +356,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/countries.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="572.2222">
+        <state vertical-scroll-proportion="209.44444">
           <caret line="5" column="988" selection-start-line="5" selection-start-column="988" selection-end-line="5" selection-end-column="988" />
           <folding />
         </state>
@@ -364,11 +364,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3461537">
-          <caret line="219" column="41" selection-start-line="219" selection-start-column="38" selection-end-line="219" selection-end-column="41" />
+        <state vertical-scroll-proportion="-5.576923">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
           <folding>
-            <marker date="1462418565000" expanded="true" signature="3134:3821" placeholder="..." />
-            <marker date="1462418565000" expanded="true" signature="8811:8822" placeholder="..." />
+            <marker date="1462419034000" expanded="true" signature="3262:3949" placeholder="..." />
+            <marker date="1462419034000" expanded="true" signature="8939:8950" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -383,8 +383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83870965">
-          <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.60573477">
+          <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
           <folding>
             <element signature="e#1770#2319#2" expanded="true" />
           </folding>

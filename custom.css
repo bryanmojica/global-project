@@ -122,6 +122,16 @@ div#global-metrics {
     text-align: center;
 }
 
+h2.mobile-shout {
+    font-size: 18px;
+    text-align: center;
+    color: #0078a8;
+}
+
+.mobile-only {
+    display: none;
+}
+
 /* mobile CSS! */
 
 @media only screen and (max-width: 700px){
@@ -141,6 +151,10 @@ div#global-metrics {
 
     .legend.leaflet-control {
         display: none;
+    }
+
+    .mobile-only {
+        display: inline-block;
     }
 
 }
