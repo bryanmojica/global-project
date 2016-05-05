@@ -109,3 +109,7 @@ select.custom::-ms-expand {
     display: none;
 }
 
+div#global-metrics {
+    text-align: center;
+    margin-top: 15px;
+}
