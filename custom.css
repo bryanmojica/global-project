@@ -88,7 +88,7 @@ td.country-name {
 
 select {
     margin: 20px;
-    width: 500px;
+    width: 410px;
     padding: 10px;
     font-family: PN;
     font-weight: bold;
@@ -112,4 +112,8 @@ select.custom::-ms-expand {
 div#global-metrics {
     text-align: center;
     margin-top: 15px;
+}
+
+.center-select {
+    text-align: center;
 }
