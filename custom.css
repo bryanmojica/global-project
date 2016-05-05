@@ -117,3 +117,20 @@ div#global-metrics {
 .center-select {
     text-align: center;
 }
+
+/* mobile CSS! */
+
+@media only screen and (max-width: 700px){
+
+    h1.page-head {
+        font-size: 50px;
+    }
+
+    select {
+        font-size: 20px;
+        width: 320px;
+    }
+
+
+
+}
