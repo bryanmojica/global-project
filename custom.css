@@ -137,12 +137,6 @@ table {
     margin-right: auto;
 }
 
-/* disable scrollwheel on map, for better page nav */
-
-div#map {
-    pointer-events: none;
-}
-
 /* mobile CSS! */
 
 @media only screen and (max-width: 700px){

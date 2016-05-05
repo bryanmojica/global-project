@@ -251,8 +251,12 @@
 				}
 			}
 
-			// initial view
-			var map = L.map('map').setView([43.8476, 18.3564], 16);
+			// initial view, zoom, and disable scrollwheel (for better page nav)
+			var map = L.map('map', {
+				center: [43.8476, 18.3564],
+				zoom: 16,
+				scrollWheelZoom: false
+			});
 
 			var googleLayer = new L.Google();
 			map.addLayer(googleLayer);
