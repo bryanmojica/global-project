@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="lib/leaflet/leaflet.label.css" />
 		<script src="lib/leaflet/leaflet.js"></script>
 		<script src="lib/leaflet/leaflet.label.js"></script>
-		<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM_9LHrejI3BB9O0U7mTimJrnnVSF7BY0"></script>
 		<script src="lib/leaflet/Google.js"></script>
 		<script src="data/countries.js"></script>
 	</head>
@@ -73,6 +73,7 @@
 
 			// create event listener to handle selection of new country / display of new data
 			select.addEventListener('change', function(event) {
+				// log to test event handler is functioning
 				console.log(event.target.value);
 
 				var selectedIndex = event.target.value;
@@ -165,7 +166,7 @@
 				layer.setStyle(
 					{
 						weight : 5,
-						color : 'green',
+						color : 'black',
 						fillColor : 'white',
 						fillOpacity : 0.2
 					}
