@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65f34fa1-fec0-4183-a193-861f67b96b6f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/custom.css" afterPath="$PROJECT_DIR$/custom.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="global-proj.iws" />
@@ -24,14 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3065134">
-              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+            <state vertical-scroll-proportion="-7.576923">
+              <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
               <folding>
-                <marker date="1462419250000" expanded="true" signature="3246:3933" placeholder="..." />
-                <marker date="1462419250000" expanded="true" signature="8923:8934" placeholder="..." />
+                <marker date="1462419545000" expanded="true" signature="3285:3972" placeholder="..." />
+                <marker date="1462419545000" expanded="true" signature="8962:8973" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -40,7 +41,7 @@
       <file leaf-file-name="countries.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/countries.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="209.44444">
+            <state vertical-scroll-proportion="572.7778">
               <caret line="5" column="988" selection-start-line="5" selection-start-column="988" selection-end-line="5" selection-end-column="988" />
               <folding />
             </state>
@@ -67,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-66.125">
-              <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
+            <state vertical-scroll-proportion="2.455197">
+              <caret line="137" column="1" selection-start-line="137" selection-start-column="1" selection-end-line="137" selection-end-column="1" />
               <folding>
                 <element signature="e#1770#2319#2" expanded="true" />
               </folding>
@@ -90,8 +91,8 @@
         <option value="$PROJECT_DIR$/lib/leaflet/leaflet.css" />
         <option value="$PROJECT_DIR$/lib/leaflet/custom.css" />
         <option value="$PROJECT_DIR$/lib/leaflet/leaflet.label.css" />
-        <option value="$PROJECT_DIR$/custom.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/custom.css" />
       </list>
     </option>
   </component>
@@ -305,8 +306,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1462419250000" expanded="true" signature="3246:3933" placeholder="..." />
-            <marker date="1462419250000" expanded="true" signature="8923:8934" placeholder="..." />
+            <marker date="1462419545000" expanded="true" signature="3285:3972" placeholder="..." />
+            <marker date="1462419545000" expanded="true" signature="8962:8973" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -345,28 +346,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/countries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="209.44444">
-          <caret line="5" column="988" selection-start-line="5" selection-start-column="988" selection-end-line="5" selection-end-column="988" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-66.125">
-          <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-          <folding>
-            <element signature="e#1770#2319#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/leaflet/leaflet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.75">
           <caret line="234" column="5" selection-start-line="234" selection-start-column="5" selection-end-line="234" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/countries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="572.7778">
+          <caret line="5" column="988" selection-start-line="5" selection-start-column="988" selection-end-line="5" selection-end-column="988" />
           <folding />
         </state>
       </provider>
@@ -381,11 +372,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3065134">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        <state vertical-scroll-proportion="-7.576923">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
           <folding>
-            <marker date="1462419250000" expanded="true" signature="3246:3933" placeholder="..." />
-            <marker date="1462419250000" expanded="true" signature="8923:8934" placeholder="..." />
+            <marker date="1462419545000" expanded="true" signature="3285:3972" placeholder="..." />
+            <marker date="1462419545000" expanded="true" signature="8962:8973" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.455197">
+          <caret line="137" column="1" selection-start-line="137" selection-start-column="1" selection-end-line="137" selection-end-column="1" />
+          <folding>
+            <element signature="e#1770#2319#2" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -132,6 +132,11 @@ h2.mobile-shout {
     display: none;
 }
 
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* mobile CSS! */
 
 @media only screen and (max-width: 700px){
